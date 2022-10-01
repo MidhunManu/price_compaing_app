@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import webbrowser
 from time import sleep
 
 headers = {
@@ -42,4 +43,8 @@ for i in range(1, 5):
     sleep(1.5)
     
 df = pd.DataFrame(items, columns=['product', 'rating', 'rating count', 'price', 'product url'])
-df.to_csv('{0}.csv'.format(search_query), index=False)
+# df.to_csv('{0}.csv'.format(search_query), index=False)
+# print(df['price'].min() * 80)
+min_index = df['price'].idxmin()
+url = (df.iloc[min_index]['product url'])
+webbrowser.open_new_tab(url)
