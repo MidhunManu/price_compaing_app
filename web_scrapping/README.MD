@@ -7,10 +7,10 @@ cd web_scrapping
 ```
 on windows 
 ```
-py scrapping.py
+py amazon_price.py
 ```
 
 on mac and linux
 ```
-python3 scrapping.py
+python3 amazon_price.py
 ```
