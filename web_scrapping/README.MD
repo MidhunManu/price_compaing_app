@@ -9,3 +9,8 @@ on windows
 ```
 py scrapping.py
 ```
+
+on mac and linux
+```
+python3 scrapping.py
+```
